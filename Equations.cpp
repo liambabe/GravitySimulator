@@ -1,11 +1,13 @@
-#include <Equations.h>
+#include "Equations.h"
+#include <cmath>
 
-class Equations
-{
-	public double calcAcceleration() { //GM/R^2
-	}
+using namespace std;
 
-	public double calcForce() { //GM1M2/R^2
-	}
 
+double Equations::calcAcceleration() { //GM/R^2
+	return 0.0;
+}
+
+double Equations::calcForce(double radius) { //GM1M2/R^2
+		return (GRAVITIONALCONSTANT*EARTHMASS)/(pow(radius,2));
 }
