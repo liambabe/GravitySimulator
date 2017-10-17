@@ -1,4 +1,5 @@
 #include "Equations.cpp"
+#include "PhysicalObject.cpp"
 #include <iostream>
 using namespace std;
 
