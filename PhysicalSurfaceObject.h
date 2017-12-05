@@ -1,0 +1,4 @@
+class PhysicalSurfaceObject : PhysicalObject
+{
+
+}
