@@ -4,8 +4,6 @@ DisplayWindow::DisplayWindow(Scene s) {
 	scene = s;
 	window = new sf::RenderWindow(sf::VideoMode(200, 200), "SFML works!");
 	window->setVerticalSyncEnabled(true);
-
-	run();
 }
 
 
@@ -14,6 +12,7 @@ void DisplayWindow::run() {
 	sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
+    //main game loop
 	while (window->isOpen()) {
 
 		sf::Event event;
