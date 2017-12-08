@@ -1,4 +1,5 @@
 #include "DisplayWindow.h"
+#include <iostream>
 
 DisplayWindow::DisplayWindow(Scene s) {
 	scene = s;
@@ -11,6 +12,8 @@ void DisplayWindow::run() {
 
 	sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
+
+    std::cout << scene.getObjects().get(0).getMass() << "\n";
 
     //main game loop
 	while (window->isOpen()) {

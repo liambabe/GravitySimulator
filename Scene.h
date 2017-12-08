@@ -2,17 +2,19 @@
 #define Scene_H
 
 #include "PhysicalObject.h"
+#include "ObjectList.h"
 
 class Scene
 {
 
 public:
-	void addObject(PhysicalObject o); //TODO array
+	void addObject(PhysicalObject o); 
 
-	PhysicalObject getObjects(); //TODO array
+	ObjectList getObjects();
+
 
 private:
-	PhysicalObject objects; //TODO convert to array
+	 ObjectList objects; 
 
 };
 

@@ -1,14 +1,23 @@
-#include "ObjectList.h";
+#include "ObjectList.h"
 
 const int OBJECTCOUNT = 2;
 
+static bool operator ==(const PhysicalObject& po1, const PhysicalObject& po2) {
+	return ((po1.getMass() == po2.getMass()) && (po1.getRadius() == po2.getRadius()));
+}
+
 ObjectList::ObjectList() {
-	array = new int[OBJECTCOUNT];
+	array = new PhysicalObject[OBJECTCOUNT];
 	addIndex = 0;
 }
 
-void ObjectList::add(PhysicalObject o){
+PhysicalObject ObjectList::get(int index) {
+	return array[index];
+} 
+
+void ObjectList::add(PhysicalObject o) {
 	array[addIndex] = o;
+	addIndex++;
 }
 
 void ObjectList::remove(PhysicalObject o) {
@@ -20,11 +29,21 @@ void ObjectList::remove(int index) {
 }
 
 int ObjectList::findIndex(PhysicalObject o) {
-	//TODO for loop over array
+	for (int i = 0; i < OBJECTCOUNT; i++) {
+		if (array[i] == o) {
+			return i;
+		}
+	}
+	return -1;
 }
 
 bool ObjectList::contains(PhysicalObject o) {
-	//TODO for loop over array
+	for (int i = 0; i < OBJECTCOUNT; i++) {
+		if (array[i] == o) {
+			return true;
+		}
+	}
+	return false;
 }
 
 

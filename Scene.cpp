@@ -1,12 +1,9 @@
 #include "Scene.h"
 
-using namespace std;
-
 void Scene::addObject(PhysicalObject o ) {
-	objects = o; //TODO convert to array form
+	objects.add(o);
 }
 
-
-PhysicalObject Scene::getObjects() {
-	return objects; //TODO convert to array
+ObjectList Scene::getObjects() {
+	return objects; 
 }

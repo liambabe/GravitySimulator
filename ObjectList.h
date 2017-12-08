@@ -19,7 +19,7 @@ public:
 	bool contains(PhysicalObject o);
 
 private:
-	PhysicalObject array[];
+	PhysicalObject *array;
 	int addIndex;
 
 

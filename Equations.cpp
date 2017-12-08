@@ -26,7 +26,7 @@ double Equations::calcTime(double initialVelocity, double finalVelocity, double 
 }
 
 double Equations::calcOrbitalRadius(double time, double mass) {//r^3 = (t^2*G*M)/(4*pi^2)
-
+	return 0.0; //to make it compile
 }
 
 //object equations

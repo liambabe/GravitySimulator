@@ -1,25 +1,29 @@
 #include "PhysicalObject.h"
 
-using namespace std;
+//constructor
+
+PhysicalObject::PhysicalObject(sf::Shape s) {
+	shape = s
+}
 
 //getter functions
-double PhysicalObject::getMass() {
+double PhysicalObject::getMass() const {
 	return mass;
 }
 
-double PhysicalObject::getVelocity() {
+double PhysicalObject::getVelocity() const {
 	return velocity;
 }
 
-double PhysicalObject::getAcceleration() {
+double PhysicalObject::getAcceleration() const {
 	return acceleration;
 }
 
-double PhysicalObject::getHeight() {
+double PhysicalObject::getHeight() const { 
 	return height;
 }
 
-double PhysicalObject::getRadius() {
+double PhysicalObject::getRadius() const {
 	return radius;
 }
 
