@@ -3,6 +3,9 @@
 
 using namespace std;
 
+const double GRAVITIONALCONSTANT = 6.67408e-11;
+const double EARTHMASS = 5.972e+24; //kgs
+const double EARTHRADIUS = 6371000.0; //m
 
 double Equations::calcDownForce(double mass, double acceleration) {//f=ma
 	return mass*acceleration;
@@ -24,4 +27,14 @@ double Equations::calcTime(double initialVelocity, double finalVelocity, double 
 
 double Equations::calcOrbitalRadius(double time, double mass) {//r^3 = (t^2*G*M)/(4*pi^2)
 
+}
+
+//object equations
+
+double Equations::calcDownForce(PhysicalObject obj) {
+	return obj.getMass()*obj.getAcceleration();
+}
+
+double Equations::calcAcceleration(PhysicalObject obj) {
+	return (GRAVITIONALCONSTANT*EARTHMASS)/(pow(obj.getRadius(),2));
 }

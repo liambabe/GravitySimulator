@@ -19,6 +19,10 @@ double PhysicalObject::getHeight() {
 	return height;
 }
 
+double PhysicalObject::getRadius() {
+	return radius;
+}
+
 //setter functions
 void PhysicalObject::setMass(double m) {
 	mass = m;
@@ -34,4 +38,8 @@ void PhysicalObject::setAcceleration(double a) {
 
 void PhysicalObject::setHeight(double h) {
 	height = h;
+}
+
+void PhysicalObject::setRadius(double r) {
+	radius = r;
 }
