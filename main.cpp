@@ -3,17 +3,16 @@
 #include "DisplayWindow.h"
 #include "Scene.h"
 #include "SpaceScene.h"
-#include "ObjectList.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	PhysicalObject human;
-	human.setMass(60.0);
+	//PhysicalObject human;
+	//human.setMass(60.0);
 
   SpaceScene s;
-  s.addObject(human);
+  //s.addObject(human);
   DisplayWindow dw(s);
   dw.run();
 

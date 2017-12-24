@@ -3,7 +3,7 @@
 //constructor
 
 PhysicalObject::PhysicalObject(sf::Shape s) {
-	shape = s
+	shape = &s;
 }
 
 //getter functions

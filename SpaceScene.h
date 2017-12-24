@@ -11,7 +11,7 @@ public:
 	PhysicalObject getStar();
 
 private:
-	PhysicalObject star;
+	PhysicalObject* star;
 
 };
 

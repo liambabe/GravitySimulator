@@ -7,13 +7,16 @@ DisplayWindow::DisplayWindow(Scene s) {
 	window->setVerticalSyncEnabled(true);
 }
 
+DisplayWindow::~DisplayWindow() {
+    delete window;
+}
 
 void DisplayWindow::run() {
 
 	sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
-    std::cout << scene.getObjects().get(0).getMass() << "\n";
+    std::cout << scene.getObjects().at(0).getMass() << "\n";
 
     //main game loop
 	while (window->isOpen()) {

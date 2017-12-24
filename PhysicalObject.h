@@ -30,7 +30,7 @@ private:
 	double acceleration;
 	double height;
 	double radius;
-	sf::Shape shape;
+	sf::Shape *shape;
 
 };
 

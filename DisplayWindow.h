@@ -14,6 +14,7 @@ class DisplayWindow
 public:
 	DisplayWindow(Scene s);
 	void run();
+	~DisplayWindow();
 
 private:
 	Scene scene;

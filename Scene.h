@@ -2,7 +2,7 @@
 #define Scene_H
 
 #include "PhysicalObject.h"
-#include "ObjectList.h"
+#include <vector>
 
 class Scene
 {
@@ -10,11 +10,11 @@ class Scene
 public:
 	void addObject(PhysicalObject o); 
 
-	ObjectList getObjects();
+	std::vector<PhysicalObject> getObjects();
 
 
 private:
-	 ObjectList objects; 
+	 std::vector<PhysicalObject> objects; 
 
 };
 
