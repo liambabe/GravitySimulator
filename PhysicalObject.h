@@ -2,13 +2,17 @@
 #define PhysicalObject_H
 
 #include <SFML/Graphics.hpp>
+#include <string>
 
 class PhysicalObject
 {
 
 public:
-	//constructor
-	PhysicalObject(sf::Shape s);
+	//constructors
+	PhysicalObject(sf::Shape s); //give a class its shape
+	PhysicalObject(std::string s); //let construct generate shape
+	~PhysicalObject();
+
 
 	//getters
 	double getMass() const;

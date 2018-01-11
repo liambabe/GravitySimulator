@@ -6,6 +6,14 @@ PhysicalObject::PhysicalObject(sf::Shape s) {
 	shape = &s;
 }
 
+PhysicalObject::PhysicalObject(std::string s) {
+
+}
+
+PhysicalObject::~PhysicalObject() {
+	delete shape;
+}
+
 //getter functions
 double PhysicalObject::getMass() const {
 	return mass;
