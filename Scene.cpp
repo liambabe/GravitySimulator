@@ -1,9 +1,9 @@
 #include "Scene.h"
 
-void Scene::addObject(PhysicalObject o ) {
+void Scene::addObject(PhysicalObject* o) {
 	objects.push_back(o);
 }
 
-std::vector<PhysicalObject> Scene::getObjects() {
+std::vector<PhysicalObject *> Scene::getObjects() {
 	return objects; 
 }

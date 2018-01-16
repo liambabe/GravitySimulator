@@ -8,13 +8,13 @@ class Scene
 {
 
 public:
-	void addObject(PhysicalObject o); 
+	void addObject(PhysicalObject* o); 
 
-	std::vector<PhysicalObject> getObjects();
+	std::vector<PhysicalObject *> getObjects();
 
 
 private:
-	 std::vector<PhysicalObject> objects; 
+	 std::vector<PhysicalObject *> objects; 
 
 };
 

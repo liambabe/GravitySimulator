@@ -2,12 +2,16 @@
 
 //constructor
 
-PhysicalObject::PhysicalObject(sf::Shape s) {
-	shape = &s;
+PhysicalObject::PhysicalObject(sf::Shape* s) {
+	shape = s;
 }
 
-PhysicalObject::PhysicalObject(std::string s) {
+PhysicalObject::PhysicalObject(std::string s, float radius) {
 
+	if (s == "circle") {
+		shape = new sf::CircleShape(radius);
+		shape->setFillColor(sf::Color::Green);
+	}
 }
 
 PhysicalObject::~PhysicalObject() {
@@ -33,6 +37,10 @@ double PhysicalObject::getHeight() const {
 
 double PhysicalObject::getRadius() const {
 	return radius;
+}
+
+sf::Shape* PhysicalObject::getShape() const {
+	return shape;
 }
 
 //setter functions

@@ -9,8 +9,8 @@ class PhysicalObject
 
 public:
 	//constructors
-	PhysicalObject(sf::Shape s); //give a class its shape
-	PhysicalObject(std::string s); //let construct generate shape
+	PhysicalObject(sf::Shape* s); //give a class its shape
+	PhysicalObject(std::string s, float radius); //let construct generate shape
 	~PhysicalObject();
 
 
@@ -20,6 +20,7 @@ public:
 	double getAcceleration() const;
 	double getHeight() const;
 	double getRadius() const;
+	sf::Shape* getShape() const;
 
 	//setters
 	void setMass(double m);

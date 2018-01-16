@@ -8,12 +8,12 @@ using namespace std;
 
 int main()
 {
-	PhysicalObject human("hi");
+	PhysicalObject human("circle", 50.f);
 	human.setMass(60.0);
 
- 	Scene s;
- 	s.addObject(human);
-	DisplayWindow dw(s);
+ 	SpaceScene s;
+ 	s.addObject(&human);
+	DisplayWindow dw(&s);
 	dw.run();
 
 	return 0;

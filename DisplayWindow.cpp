@@ -1,14 +1,15 @@
 #include "DisplayWindow.h"
 #include <iostream>
 
-DisplayWindow::DisplayWindow(Scene s) {
+DisplayWindow::DisplayWindow(Scene* s) {
 	scene = s;
 	window = new sf::RenderWindow(sf::VideoMode(200, 200), "SFML works!");
 	window->setVerticalSyncEnabled(true);
 }
 
 DisplayWindow::~DisplayWindow() {
-    delete window;
+	delete window;
+ 	delete scene;
 }
 
 void DisplayWindow::run() {
@@ -16,7 +17,7 @@ void DisplayWindow::run() {
 	sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
-    std::cout << scene.getObjects().at(0).getMass() << "\n";
+    std::cout << scene->getObjects().at(0)->getMass() << "\n";
 
     //main game loop
 	while (window->isOpen()) {
@@ -29,7 +30,12 @@ void DisplayWindow::run() {
         }
 
         window->clear();
-        window->draw(shape);
+
+	//drawloop
+	for (int i = 0; i < scene->getObjects().size(); i++) {
+		window->draw(*scene->getObjects().at(i)->getShape());
+	}
+	
         window->display();
 
 	}
