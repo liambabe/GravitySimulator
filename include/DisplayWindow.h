@@ -6,18 +6,20 @@
 /////////////////////////////////////////////
 
 #include "Scene.h"
+#include "State.h"
 #include <SFML/Graphics.hpp>
 
-class DisplayWindow
+class DisplayWindow : State
 {
 
 public:
-	DisplayWindow(Scene s);
+	DisplayWindow(Scene* s);
 	void run();
 	~DisplayWindow();
+	void paintObjects();
 
 private:
-	Scene scene;
+	Scene *scene;
 	sf::RenderWindow *window;
 
 };

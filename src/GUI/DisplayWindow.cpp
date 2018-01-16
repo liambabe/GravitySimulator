@@ -3,7 +3,7 @@
 
 DisplayWindow::DisplayWindow(Scene* s) {
 	scene = s;
-	window = new sf::RenderWindow(sf::VideoMode(200, 200), "SFML works!");
+	window = new sf::RenderWindow(sf::VideoMode(200, 200), "SFML works!", sf::Style::Titlebar | sf::Style::Close);
 	window->setVerticalSyncEnabled(true);
 }
 
@@ -30,14 +30,15 @@ void DisplayWindow::run() {
         }
 
         window->clear();
+        paintObjects();
+        window->display();
 
+	}
+}
+
+void DisplayWindow::paintObjects() {
 	//drawloop
 	for (int i = 0; i < scene->getObjects().size(); i++) {
 		window->draw(*scene->getObjects().at(i)->getShape());
 	}
-	
-        window->display();
-
-	}
-
 }
