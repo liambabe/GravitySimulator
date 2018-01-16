@@ -1,5 +1,5 @@
 
-SOURCES = $(shell find . -maxdepth 3 -name "*.cpp")
+SOURCES = $(shell find . -maxdepth 4 -name "*.cpp")
 
 all: compile
 
