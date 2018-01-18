@@ -1,4 +1,4 @@
-#include "Scene.h"
+#include "GUI/Scenes/Scene.h"
 
 void Scene::addObject(PhysicalObject* o) {
 	objects.push_back(o);

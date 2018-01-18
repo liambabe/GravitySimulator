@@ -1,7 +1,7 @@
 #ifndef Equations_H
 #define Equations_H
 
-#include "PhysicalObject.h"
+#include "Entities/PhysicalObject.h"
 
 extern const double GRAVITIONALCONSTANT;
 extern const double EARTHMASS;

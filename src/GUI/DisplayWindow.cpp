@@ -1,4 +1,4 @@
-#include "DisplayWindow.h"
+#include "GUI/DisplayWindow.h"
 #include <iostream>
 
 DisplayWindow::DisplayWindow(Scene* s) {

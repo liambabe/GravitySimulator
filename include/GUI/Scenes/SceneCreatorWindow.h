@@ -1,7 +1,7 @@
 #ifndef SceneCreatorWindow_H
 #define SceneCreatorWindow_H
 
-#include "State.h"
+#include "Control/State.h"
 
 class SceneCreatorWindow : State
 {

@@ -1,7 +1,7 @@
 #ifndef Scene_H
 #define Scene_H
 
-#include "PhysicalObject.h"
+#include "Entities/PhysicalObject.h"
 #include <vector>
 
 class Scene

@@ -1,4 +1,4 @@
-#include "Equations.h"
+#include "Logic/Equations.h"
 #include <cmath>
 
 using namespace std;

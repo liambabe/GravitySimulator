@@ -1,4 +1,4 @@
-#include "GameStateMachine.h"
+#include "Control/GameStateMachine.h"
 
 GameStateMachine::GameStateMachine(State* s) {
 	currentState = s;

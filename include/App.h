@@ -1,8 +1,8 @@
 #ifndef App_H
 #define App_H
 
-#include "Scene.h"
-#include "State.h"
+#include "GUI/Scenes/Scene.h"
+#include "Control/State.h"
 #include <SFML/Graphics.hpp>
 
 class App

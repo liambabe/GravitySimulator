@@ -1,7 +1,7 @@
 #ifndef SpaceScene_H
 #define SpaceScene_H
 
-#include "Scene.h"
+#include "GUI/Scenes/Scene.h"
 
 class SpaceScene : public Scene
 {

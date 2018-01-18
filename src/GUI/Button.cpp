@@ -1,4 +1,4 @@
-#include "Button.h"
+#include "GUI/Button.h"
 
 Button::Button(std::string text, sf::Image* idle, sf::Image* clicked) {
 	text = text;

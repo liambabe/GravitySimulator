@@ -1,7 +1,7 @@
 #ifndef MenuWindow_H
 #define MenuWindow_H
 
-#include "State.h"
+#include "Control/State.h"
 
 class MenuWindow : State
 {

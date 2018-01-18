@@ -1,7 +1,7 @@
 #ifndef GameStateMachine_H
 #define GameStateMachine_H
 
-#include "State.h"
+#include "Control/State.h"
 
 class GameStateMachine {
 
