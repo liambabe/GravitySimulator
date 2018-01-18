@@ -9,7 +9,7 @@ class ButtonFactory {
 
 public:
 	ButtonFactory(ImageMap i);
-	Button* createLongButton(std::string text, std::string colour);
+	Button *createLongButton(std::string text, std::string colour);
 
 private:
 	ImageMap images;

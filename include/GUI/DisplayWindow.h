@@ -7,13 +7,14 @@
 
 #include "GUI/Scenes/Scene.h"
 #include "Control/State.h"
+#include "GUI/ImageMap.h"
 #include <SFML/Graphics.hpp>
 
 class DisplayWindow : State
 {
 
 public:
-	DisplayWindow(Scene* s);
+	DisplayWindow(Scene* s, ImageMap i);
 	void run();
 	~DisplayWindow();
 	void paintObjects();
@@ -21,6 +22,7 @@ public:
 private:
 	Scene *scene;
 	sf::RenderWindow *window;
+	ImageMap images;
 
 };
 

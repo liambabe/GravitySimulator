@@ -7,19 +7,19 @@ ImageMap::ImageMap() {
 	loadImages();
 }
 
-sf::Image& ImageMap::getImage(string name) {
+sf::Texture& ImageMap::getImage(string name) {
 	return images.find(name)->second;
 }
 
 void ImageMap::loadImages() {
-	sf::Image loadedImage;
+	sf::Texture loadedImage;
 	if(!loadedImage.loadFromFile("img/Buttons/GreyLongIdle.png")) { 
 		std::cout << "img load failed: GreyLongIdle.png\n";} else {
-			images.insert(pair<string, sf::Image>(string("GreyLongIdle"), loadedImage));
+			images.insert(pair<string, sf::Texture>(string("GreyLongIdle"), loadedImage));
 		}
 	if(!loadedImage.loadFromFile("img/Buttons/GreyLongClick.png")) {
 		std::cout << "img load failed: GreyLongClick.png\n";} else {
-			images.insert(pair<string, sf::Image>(string("GreyLongClick"), loadedImage));
+			images.insert(pair<string, sf::Texture>(string("GreyLongClick"), loadedImage));
 		}
 
 }

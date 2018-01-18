@@ -16,7 +16,7 @@ int main()
 
  	SpaceScene s;
  	s.addObject(&human);
-	DisplayWindow dw(&s);
+	DisplayWindow dw(&s, im);
 	dw.run();
 
 	return 0;
