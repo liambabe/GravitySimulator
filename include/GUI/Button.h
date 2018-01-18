@@ -8,7 +8,7 @@ class Button
 {
 
 public:
-	Button(std::string text, sf::Image* idle, sf::Image* clicked);
+	Button(std::string text, sf::Image& idle, sf::Image& clicked);
 	void setLocation(sf::Vector2f loc);
 	sf::Vector2f getLocation();
 	bool isClicked(sf::Vector2f &mouseLoc);

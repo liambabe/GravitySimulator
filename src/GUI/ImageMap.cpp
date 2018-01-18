@@ -7,7 +7,7 @@ ImageMap::ImageMap() {
 	loadImages();
 }
 
-sf::Image ImageMap::getImage(string name) {
+sf::Image& ImageMap::getImage(string name) {
 	return images.find(name)->second;
 }
 

@@ -8,7 +8,7 @@ class ImageMap
 
 public:
 	ImageMap();
-	sf::Image getImage(std::string name);
+	sf::Image& getImage(std::string name);
 
 private:
 	void loadImages();

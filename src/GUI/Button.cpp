@@ -1,9 +1,9 @@
 #include "GUI/Button.h"
 
-Button::Button(std::string text, sf::Image* idle, sf::Image* clicked) {
+Button::Button(std::string text, sf::Image& idle, sf::Image& clicked) {
 	text = text;
-	idle = idle;
-	clicked = clicked;
+	//idle = idle;
+	//clicked = clicked;
 }
 
 void Button::setLocation(sf::Vector2f loc) {
