@@ -20,10 +20,7 @@ void DisplayWindow::run() {
     ButtonFactory* factory;
 
     factory = new ButtonFactory(images);
-    std::unique_ptr<Button> button (factory->createLongButton("", "gray"));
-    //Button *button = new Button("", images.getImage("GreyLongIdle"), images.getImage("GreyLongClicked"));
-
-
+    std::unique_ptr<Button> button (factory->createLongButton("", "grey"));
 
 	sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
@@ -44,10 +41,6 @@ void DisplayWindow::run() {
         }
 
         window->clear();
-        std::cout << "hi\n";
-        std::cout << button->getText() << "\n"; 
-                std::cout << "hi\n";
-
         window->draw(*button);
         window->display();
 
