@@ -7,7 +7,7 @@ ButtonFactory::ButtonFactory(ImageMap i) {
 
 std::unique_ptr<Button> ButtonFactory::createLongButton(std::string text, std::string colour) {
 	if (colour == "grey") {
-		return std::unique_ptr<Button>(new Button(text, images.getImage("GreyLongIdle"), images.getImage("GreyLongClicked")));
+		return std::make_unique<Button>(text, images.getImage("GreyLongIdle"), images.getImage("GreyLongClicked"));
 	}
 }
 

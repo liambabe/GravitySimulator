@@ -20,7 +20,7 @@ void DisplayWindow::run() {
     ButtonFactory* factory;
 
     factory = new ButtonFactory(images);
-    std::unique_ptr<Button> button (factory->createLongButton("", "grey"));
+    buttonList.push_back(std::unique_ptr<Button> (factory->createLongButton("", "grey")));
 
 	sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
@@ -35,13 +35,17 @@ void DisplayWindow::run() {
             if (event.type == sf::Event::Closed) {
                 window->close();
             } else if (event.type == sf::Event::MouseButtonPressed) {
-            	std::cout << "Button Pressed\n";
+                sf::Vector2f mousePos = window->mapPixelToCoords(sf::Mouse::getPosition(*window));
+                if (buttonList.at(0)->isClicked(mousePos)) {
+                    std::cout << "Button Pressed\n";
+                }
             }
 
         }
 
         window->clear();
-        window->draw(*button);
+        paintObjects();
+        paintButtons();
         window->display();
 
 	}
@@ -52,4 +56,10 @@ void DisplayWindow::paintObjects() {
 	for (int i = 0; i < scene->getObjects().size(); i++) {
 		window->draw(*scene->getObjects().at(i)->getShape());
 	}
+}
+
+void DisplayWindow::paintButtons() {
+    for (int i = 0; i < buttonList.size(); i++) {
+        window->draw(*buttonList.at(i));
+    }
 }

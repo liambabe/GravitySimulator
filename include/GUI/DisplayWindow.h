@@ -6,11 +6,11 @@
 /////////////////////////////////////////////
 
 #include "GUI/Scenes/Scene.h"
-#include "Control/State.h"
 #include "GUI/ImageMap.h"
+#include "GUI/Menus/Menu.hpp"
 #include <SFML/Graphics.hpp>
 
-class DisplayWindow : State
+class DisplayWindow : public Menu
 {
 
 public:
@@ -18,6 +18,7 @@ public:
 	void run();
 	~DisplayWindow();
 	void paintObjects();
+	void paintButtons();
 
 private:
 	Scene *scene;
