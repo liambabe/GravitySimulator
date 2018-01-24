@@ -17,6 +17,8 @@ public:
 	std::string getText() const;
 	void reset();
 	bool getClickedBool();
+	void addButtons(Button b);
+
 
 private:
 	std::string text;

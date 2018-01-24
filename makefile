@@ -1,4 +1,3 @@
-
 SOURCES = $(shell find . -maxdepth 4 -name "*.cpp")
 
 all: compile

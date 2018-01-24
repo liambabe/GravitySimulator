@@ -1,23 +1,19 @@
-#include "Logic/Equations.h"
-#include "Entities/PhysicalObject.h"
-#include "GUI/DisplayWindow.h"
-#include "GUI/Scenes/Scene.h"
-#include "GUI/Scenes/SpaceScene.h"
 #include "GUI/ImageMap.h"
-#include <iostream>
-using namespace std;
+#include "GUI/Menus/MainMenu.hpp"
+#include "App.h"
+#include <memory>
 
 int main()
 {
-	PhysicalObject human("circle", 50.f);
-	human.setMass(60.0);
 
-	ImageMap im;
+	std::shared_ptr<ImageMap> im = std::make_shared<ImageMap>();
 
- 	SpaceScene s;
- 	s.addObject(&human);
-	DisplayWindow dw(&s, im);
-	dw.run();
+	GameStateMachine sm;
+
+	sm.registerState(std::make_shared<MainMenu>(im));
+
+	App app(im, sm);
+	app.run();
 
 	return 0;
 }

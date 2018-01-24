@@ -1,9 +1,15 @@
 #include "Control/GameStateMachine.h"
 
-GameStateMachine::GameStateMachine(State* s) {
-	currentState = s;
+GameStateMachine::GameStateMachine() {
 }
 
 GameStateMachine::~GameStateMachine() {
-	delete currentState;
+}
+
+void GameStateMachine::registerState(std::shared_ptr<State> s) {
+	stateList.push_back(s);
+}
+
+std::shared_ptr<State> GameStateMachine::getCurrentState() {
+	return stateList.at(0); //TODO update this
 }

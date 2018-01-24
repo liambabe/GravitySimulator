@@ -5,15 +5,16 @@
 #include "GUI/ImageMap.h"
 #include <SFML/Graphics.hpp>
 #include <utility>
+#include <memory>
 
 class ButtonFactory {
 
 public:
-	ButtonFactory(ImageMap i);
-	std::unique_ptr<Button> createLongButton(std::string text, std::string colour);
+	ButtonFactory(std::shared_ptr<ImageMap> i);
+	std::shared_ptr<Button> createLongButton(std::string text, std::string colour);
 
 private:
-	ImageMap images;
+	std::shared_ptr<ImageMap> images;
 
 };
 
