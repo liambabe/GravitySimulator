@@ -2,8 +2,8 @@
 #define Button_H
 
 #include <SFML/Graphics.hpp>
-
 #include <utility>
+#include "GUI/Menus/ButtonActions.hpp"
 
 class Button : public sf::Drawable
 {
@@ -18,6 +18,7 @@ public:
 	void reset();
 	bool getClickedBool();
 	void addButtons(Button b);
+	void setAction(std::string type);
 
 
 private:
@@ -27,6 +28,7 @@ private:
 	sf::Vector2f location;
 	std::unique_ptr<sf::Sprite> currentSprite;
 	bool clickedBool;
+	std::unique_ptr<ButtonAction> action;
 
 };
 

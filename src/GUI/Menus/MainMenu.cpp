@@ -1,5 +1,4 @@
 #include "GUI/Menus/MainMenu.hpp"
-#include <iostream>
 #include "GUI/ButtonFactory.h"
 #include "GUI/Button.h"
 #include <utility>

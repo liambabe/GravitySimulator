@@ -1,11 +1,6 @@
 #ifndef MainMenu_H
 #define MainMenu_H
 
-/////////////////////////////////////////////
-// Wrapper class for sfml renderwindow
-/////////////////////////////////////////////
-
-#include "GUI/Scenes/Scene.h"
 #include "GUI/ImageMap.h"
 #include "GUI/Menus/Menu.hpp"
 #include <memory>
