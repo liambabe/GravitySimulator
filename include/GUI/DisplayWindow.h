@@ -19,6 +19,7 @@ public:
 	~DisplayWindow();
 	void paintObjects();
 	void paintButtons();
+	void releaseButtons();
 
 private:
 	Scene *scene;

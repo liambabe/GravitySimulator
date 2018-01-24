@@ -10,6 +10,7 @@ class Menu : public State
 
 public:
 	virtual void paintButtons() = 0;
+	virtual void releaseButtons() = 0;
 
 protected:
 	std::vector<std::unique_ptr<Button>> buttonList;

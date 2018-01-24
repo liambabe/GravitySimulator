@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <utility>
 
 class Button : public sf::Drawable
 {
@@ -14,12 +15,16 @@ public:
 	bool isClicked(sf::Vector2f &mouseLoc);
 	void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 	std::string getText() const;
+	void reset();
+	bool getClickedBool();
 
 private:
 	std::string text;
 	sf::Sprite idle;
 	sf::Sprite clicked;
 	sf::Vector2f location;
+	std::unique_ptr<sf::Sprite> currentSprite;
+	bool clickedBool;
 
 };
 

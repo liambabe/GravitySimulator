@@ -7,7 +7,7 @@
 DisplayWindow::DisplayWindow(Scene* s, ImageMap i) {
 	scene = s;
     images = i;
-	window = new sf::RenderWindow(sf::VideoMode(200, 200), "SFML works!", sf::Style::Titlebar | sf::Style::Close);
+	window = new sf::RenderWindow(sf::VideoMode(250, 250), "SFML works!", sf::Style::Titlebar | sf::Style::Close);
 	window->setVerticalSyncEnabled(true);
 }
 
@@ -22,6 +22,8 @@ void DisplayWindow::run() {
     factory = new ButtonFactory(images);
     buttonList.push_back(std::unique_ptr<Button> (factory->createLongButton("", "grey")));
 
+    buttonList.at(0)->setLocation(sf::Vector2f(10, 10));
+
 	sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
     std::cout << scene->getObjects().at(0)->getMass() << "\n";
@@ -34,11 +36,15 @@ void DisplayWindow::run() {
         {
             if (event.type == sf::Event::Closed) {
                 window->close();
-            } else if (event.type == sf::Event::MouseButtonPressed) {
+            } 
+            if (event.type == sf::Event::MouseButtonPressed) {
                 sf::Vector2f mousePos = window->mapPixelToCoords(sf::Mouse::getPosition(*window));
                 if (buttonList.at(0)->isClicked(mousePos)) {
                     std::cout << "Button Pressed\n";
                 }
+                
+            } else if (event.type == sf::Event::MouseButtonReleased) {
+                releaseButtons();
             }
 
         }
@@ -63,3 +69,10 @@ void DisplayWindow::paintButtons() {
         window->draw(*buttonList.at(i));
     }
 }
+
+void DisplayWindow::releaseButtons() {
+    for (int i = 0; i < buttonList.size(); i++) {
+        buttonList.at(i)->reset();
+    }
+}
+
