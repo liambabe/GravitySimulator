@@ -8,28 +8,6 @@ MainMenu::MainMenu(std::shared_ptr<ImageMap> i) {
     images = i;
 }
 
-void MainMenu::paintButtons(sf::RenderWindow &App) {
-    for (int i = 0; i < buttonList.size(); i++) {
-        App.draw(*buttonList.at(i));
-    }
-}
-
-void MainMenu::releaseButtons() {
-    for (int i = 0; i < buttonList.size(); i++) {
-        buttonList.at(i)->reset();
-    }
-}
-
-void MainMenu::checkButtons(sf::Vector2f mousePos) {
-    for (int i = 0; i < buttonList.size(); i++) {
-        buttonList.at(i)->isClicked(mousePos);
-    }
-}
-
-void MainMenu::addButton(std::shared_ptr<Button> b) {
-    buttonList.push_back(b);
-}
-
 int MainMenu::Run(sf::RenderWindow &App) {
 
     bool running = true;

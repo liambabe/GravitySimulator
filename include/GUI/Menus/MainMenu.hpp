@@ -16,10 +16,6 @@ class MainMenu : public Menu
 
 public:
 	MainMenu(std::shared_ptr<ImageMap> i);
-	void paintButtons(sf::RenderWindow &App);
-	void checkButtons(sf::Vector2f mousePos);
-	void releaseButtons();
-	void addButton(std::shared_ptr<Button> b);
 	int Run(sf::RenderWindow &App);
 
 private:
