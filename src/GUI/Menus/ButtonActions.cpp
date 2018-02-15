@@ -2,5 +2,9 @@
 #include <iostream>
 
 void StartAction::actionPreformed() {
-	std::cout << "start clicked\n";
+	std::cout << "hi ben\n";
+}
+
+void DefaultAction::actionPreformed() {
+	std::cout << "Button Clicked\n";
 }

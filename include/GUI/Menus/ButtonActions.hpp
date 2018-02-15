@@ -7,6 +7,12 @@ public:
 	virtual void actionPreformed() = 0;
 };
 
+class DefaultAction : public ButtonAction
+{
+public:
+	void actionPreformed();
+};
+
 class StartAction : public ButtonAction
 {
 public:

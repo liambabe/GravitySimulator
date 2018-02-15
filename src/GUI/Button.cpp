@@ -6,7 +6,7 @@ Button::Button(std::string text, sf::Texture& i, sf::Texture& c) {
 	clicked.setTexture(c);
 	currentSprite = std::make_unique<sf::Sprite>(idle);
 	clickedBool = false;
-	setAction("start");
+	setAction("default");
 }
 
 void Button::setLocation(sf::Vector2f loc) {
@@ -14,6 +14,7 @@ void Button::setLocation(sf::Vector2f loc) {
 	idle.setPosition(location);
 	loc = sf::Vector2f(loc.x, loc.y+4);
 	clicked.setPosition(loc);
+	reset();
 }
 
 sf::Vector2f Button::getLocation() {
@@ -52,7 +53,9 @@ bool Button::getClickedBool() {
 
 
 void Button::setAction(std::string type) {
-	if (type == "start") {
+	if (type == "default") {
+		action = std::make_unique<DefaultAction>();
+	} else if (type == "start") {
 		action = std::make_unique<StartAction>();
 	}
 }
