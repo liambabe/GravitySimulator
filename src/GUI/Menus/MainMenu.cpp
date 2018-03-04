@@ -5,6 +5,7 @@
 
 MainMenu::MainMenu(std::shared_ptr<ImageMap> i) {
     images = i;
+    setName("MainMenu");
 }
 
 int MainMenu::Run(sf::RenderWindow &App) {

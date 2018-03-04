@@ -6,6 +6,8 @@
 #include <utility>
 #include <memory>
 
+
+
 class GameStateMachine {
 
 public:
@@ -13,6 +15,8 @@ public:
 	~GameStateMachine();
 	void registerState(std::shared_ptr<State> s);
 	std::shared_ptr<State> getCurrentState();
+	void changeState(std::string s);
+	std::shared_ptr<State> getState(std::string s);
 
 
 private:
